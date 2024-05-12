@@ -1,0 +1,45 @@
+import java.util.*;
+        public class Main {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                int n1 = sc.nextInt();
+                int n2 = sc.nextInt();
+                int sum = 0, sum1 = 0, sum2 = 0;
+                int temp = 0;
+                int n3, n4;
+                int r, r1, r2;
+                while (n1 > 0) {
+                    r = n1 % 10;
+                    sum = sum + r;
+                    n1 = n1 / 10;
+                }
+                //System.out.println(sum);
+         n3 = sum * n2;
+         //System.out.println(n3);
+                if(n3 <= 9)
+                    System.out.println(n3);
+                else {
+                    while (n3 > 9) {
+                        while (n3 > 0) {
+                            r1 = n3 % 10;
+                            sum1 = sum1 + r1;
+                            n3 = n3 / 10;
+                        }
+                    }
+                }
+            //System.out.println(sum1);
+        n4 = sum1;
+                if(n4 < 9)
+                    System.out.println(n4);
+                else {
+                    while (n4 > 9) {
+                        while (n4 > 0) {
+                            r2 = n4 % 10;
+                            sum2 = sum2 + r2;
+                            n4 = n4 / 10;
+                        }
+                    }
+                }
+        System.out.println(sum2);
+    }
+}
